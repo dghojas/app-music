@@ -16,7 +16,6 @@ const TrackCenter = React.forwardRef(
         return (
             <PlayerCenter>
                 <PlayerCenterButtonsContainer>
-                    {/* <span>PREV</span> */}
                     <PlayIconWrapper onClick={handleAudio}>
                         {!isPlaying ? (
                             <PlayIconSvg
@@ -32,7 +31,6 @@ const TrackCenter = React.forwardRef(
                             />
                         )}
                     </PlayIconWrapper>
-                    {/* <span>NEXT</span> */}
                 </PlayerCenterButtonsContainer>
 
                 <Duration
