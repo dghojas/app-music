@@ -11,9 +11,6 @@ const NavbarProfileMenu = ({ open }) => {
             <ProfileMenuLink href="https://open.spotify.com" target="_blank">
                 Cuenta
             </ProfileMenuLink>
-            <ProfileMenuButton onClick={() => alert('cerrar sesión')}>
-                Cerrar Sesión
-            </ProfileMenuButton>
         </ProfileMenuContainer>
     ) : null;
 };
