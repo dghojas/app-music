@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Switch, useParams, Route } from 'react-router-dom';
 import { LibraryLink } from '../../components/LibraryMenu/libraryMenuStyles';
 import TrackItem from '../../components/TrackItem/TrackItem';
@@ -65,7 +65,7 @@ const Artist = () => {
 
     const { id } = useParams();
 
-    React.useEffect(() => {
+    useEffect(() => {
         dispatch(getArtistStart({ id }));
         dispatch(isUserFollowingStart({ id }));
         dispatch(getArtistTracksStart({ id }));
@@ -146,9 +146,6 @@ const Artist = () => {
                             <LibraryLink exact to={`/app/artist/${id}/related`}>
                                 RELATED ARTISTS
                             </LibraryLink>
-                            <LibraryLink exact to={`/app/artist/${id}/about`}>
-                                ABOUT
-                            </LibraryLink>
                         </ul>
                     </ArtistHeader>
 
@@ -187,66 +184,6 @@ const Artist = () => {
                                                     )}
                                                 />
                                             ))}
-                                        </ArtistSection>
-                                    ) : null}
-
-                                    {albums.length ? (
-                                        <ArtistSection>
-                                            <SectionTitleContainer
-                                                hasPadding={false}
-                                            >
-                                                <SectionTitle>
-                                                    Albums
-                                                </SectionTitle>
-                                            </SectionTitleContainer>
-                                            <LibraryItemsContainer
-                                                hasPadding={false}
-                                                itemMinWidth={220}
-                                            >
-                                                <ArtistContentItem
-                                                    albums={albums}
-                                                />
-                                            </LibraryItemsContainer>
-                                        </ArtistSection>
-                                    ) : null}
-
-                                    {singles.length ? (
-                                        <ArtistSection>
-                                            <SectionTitleContainer
-                                                hasPadding={false}
-                                            >
-                                                <SectionTitle>
-                                                    Singles
-                                                </SectionTitle>
-                                            </SectionTitleContainer>
-                                            <LibraryItemsContainer
-                                                hasPadding={false}
-                                                itemMinWidth={220}
-                                            >
-                                                <ArtistContentItem
-                                                    albums={singles}
-                                                />
-                                            </LibraryItemsContainer>
-                                        </ArtistSection>
-                                    ) : null}
-
-                                    {appears.length ? (
-                                        <ArtistSection>
-                                            <SectionTitleContainer
-                                                hasPadding={false}
-                                            >
-                                                <SectionTitle>
-                                                    Appears on
-                                                </SectionTitle>
-                                            </SectionTitleContainer>
-                                            <LibraryItemsContainer
-                                                hasPadding={false}
-                                                itemMinWidth={220}
-                                            >
-                                                <ArtistContentItem
-                                                    albums={appears}
-                                                />
-                                            </LibraryItemsContainer>
                                         </ArtistSection>
                                     ) : null}
                                 </>
