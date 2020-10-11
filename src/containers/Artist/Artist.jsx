@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Switch, useParams, Route } from 'react-router-dom';
 import { LibraryLink } from '../../components/LibraryMenu/libraryMenuStyles';
 import TrackItem from '../../components/TrackItem/TrackItem';
-import ArtistContentItem from '../../components/ArtistContentItem/ArtistContentItem';
+
 // redux
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -35,7 +35,6 @@ import { ReactComponent as MoreIcon } from '../../assets/icons/more.svg';
 import {
     SectionTitleContainer,
     SectionTitle,
-    LibraryItemsContainer,
 } from '../../components/LibraryItem/playlistItemStyles';
 import MoreMenu from '../../components/MoreMenu/MoreMenu';
 import { checkLikeSongStart } from '../Playlists/playlistsActions';
@@ -51,15 +50,15 @@ const Artist = () => {
     const { artist, tracks, following, loading } = useSelector(
         ({ artist }) => artist
     );
-    const { albums, singles, appears } = useSelector(
-        ({ artist: { albums } }) => ({
-            albums: albums.filter(({ album_type }) => album_type === 'album'),
-            singles: albums.filter(({ album_type }) => album_type === 'single'),
-            appears: albums.filter(
-                ({ album_type }) => album_type === 'compilation'
-            ),
-        })
-    );
+    // const { albums, singles, appears } = useSelector(
+    //     ({ artist: { albums } }) => ({
+    //         albums: albums.filter(({ album_type }) => album_type === 'album'),
+    //         singles: albums.filter(({ album_type }) => album_type === 'single'),
+    //         appears: albums.filter(
+    //             ({ album_type }) => album_type === 'compilation'
+    //         ),
+    //     })
+    // );
 
     useTitle(`Spotify - ${artist.name}`);
 

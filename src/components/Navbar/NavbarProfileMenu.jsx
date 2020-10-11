@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-    ProfileMenuContainer,
-    ProfileMenuLink,
-    ProfileMenuButton,
-} from './navbarStyles';
+import { ProfileMenuContainer, ProfileMenuLink } from './navbarStyles';
 
 const NavbarProfileMenu = ({ open }) => {
     return open ? (
