@@ -12,7 +12,7 @@ export const LibraryLink = styled(NavLink)`
   font-size: 14px;
   line-height: 16px;
   font-weight: 600;
-  color: #fff;
+  color: #1db954;
   position: relative;
   border: 0;
   display: inline-block;
@@ -22,6 +22,7 @@ export const LibraryLink = styled(NavLink)`
   cursor: pointer;
 
   &.active {
+    color: #fff;
     background-color: #333;
   }
 `;
