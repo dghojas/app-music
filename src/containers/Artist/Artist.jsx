@@ -19,7 +19,7 @@ import useTitle from '../../hooks/useTitle';
 import ArtistRoutes from './ArtistRoutes';
 import {
     ArtistContainer,
-    ArtistBackground,
+    // ArtistBackground,
     ArtistSubContainer,
     ArtistHeader,
     ArtistName,
@@ -86,18 +86,18 @@ const Artist = () => {
 
     if (loading || playlistLoading) return <Loader isLoading={loading} />;
 
-    const randomColors = [
-        '#1db954',
-        '#ffffff',
-        '#9A952B',
-        '#509BF5',
-        '#BA2323',
-        '#de681d',
-        '#de1d79',
-        '#2ad6bc',
-        '#312883',
-        '#BAF2F3',
-    ];
+    // const randomColors = [
+    //     '#1db954',
+    //     '#ffffff',
+    //     '#9A952B',
+    //     '#509BF5',
+    //     '#BA2323',
+    //     '#de681d',
+    //     '#de1d79',
+    //     '#2ad6bc',
+    //     '#312883',
+    //     '#BAF2F3',
+    // ];
 
     return (
         <>
@@ -112,11 +112,11 @@ const Artist = () => {
                 ]}
             />
             <ArtistContainer style={{ color: '#fff' }}>
-                <ArtistBackground
+                {/* <ArtistBackground
                     color={
                         randomColors[artist?.followers?.total?.toString()[0]]
                     }
-                />
+                /> */}
                 <ArtistSubContainer>
                     <ArtistHeader>
                         <ArtistName>{artist.name}</ArtistName>
@@ -126,7 +126,7 @@ const Artist = () => {
                             </ArtistPlayButton>
                             <ArtistFollowContainer onClick={handleFollow}>
                                 <ArtitstFollowText
-                                    color={following ? '#1db954' : '#fff'}
+                                    color={following ? '#1db954' : '#1d1b1a'}
                                 >
                                     {following ? 'UnFollow' : 'Follow'}
                                 </ArtitstFollowText>
@@ -135,7 +135,7 @@ const Artist = () => {
                                 onClick={handleOnClickMore}
                                 active={isMoreMenuOpen}
                             >
-                                <MoreIcon fill="#fff" width={24} />
+                                <MoreIcon fill="#1db954" width={24} />
                             </ArtistMoreIconContainer>
                         </ArtistButtonsContainer>
                         <ul>

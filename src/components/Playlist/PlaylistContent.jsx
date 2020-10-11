@@ -138,7 +138,7 @@ const PlaylistContent = ({
                                             />
                                         ) : (
                                             <HeartOutlineIcon
-                                                fill="#fff"
+                                                fill="#1d1b1a"
                                                 width={20}
                                                 height={20}
                                                 onClick={handleFollow}
@@ -150,7 +150,7 @@ const PlaylistContent = ({
                                     onClick={handleOnClickMore}
                                     active={isMoreMenuOpen}
                                 >
-                                    <MoreIcon fill="#fff" width={20} />
+                                    <MoreIcon fill="#1db954" width={20} />
                                 </IconContainer>
                             </PlaylistIconsWrapper>
                         ) : null}

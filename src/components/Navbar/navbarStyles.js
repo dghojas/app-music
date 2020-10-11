@@ -83,7 +83,7 @@ export const ArrowIconContainer = styled.button`
 export const UpgradeButton = styled.a`
   background-color: transparent;
   border-radius: 100px;
-  border: 2px solid #fff;
+  border: 2px solid #1d1b1a;
   padding: 0.5rem 2.125rem;
   margin-right: 2rem;
   font-size: 12px;
